@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BotRPA</name>
+    </assembly>
+    <members>
+        <member name="T:BotRPA.Bot">
+            <summary>
+            Main class that starts the application
+            </summary>
+            <remarks>
+            The driver, the url to visit, the configuration of the browser window are defined and the method that searches the repository is called..
+            </remarks>
+        </member>
+        <member name="T:BotRPA.Functionalities">
+            <summary>
+            Class that defines the functionalities of the robot
+            </summary>
+        </member>
+        <member name="F:BotRPA.Functionalities.driver">
+            <value> variable that declares the chrome driver to control the browser.</value>
+        </member>
+        <member name="F:BotRPA.Functionalities.URL">
+            <value> Variable that declares the URL of the web page where the tests will be done.</value>
+        </member>
+        <member name="M:BotRPA.Functionalities.#ctor(OpenQA.Selenium.Chrome.ChromeDriver,System.String)">
+            <summary>
+            constructor of the instruction class that initializes and assigns the dirver and url members
+            </summary>
+        </member>
+        <member name="M:BotRPA.Functionalities.GetDescription">
+            <summary>
+            Search for repositories with search term "Selenium" and return the description of the fourth result.
+            </summary>
+            <return>
+            Description of the repository.
+            </return>
+        </member>
+    </members>
+</doc>
