@@ -9,17 +9,33 @@ using System.Threading.Tasks;
 
 namespace BotRPA
 {
+    /// <summary>
+    /// Class that defines the functionalities of the robot
+    /// </summary>
     public class Functionalities
     {
+        ///<value> variable that declares the chrome driver to control the browser.</value>
         private readonly ChromeDriver driver;
+        ///<value> Variable that declares the URL of the web page where the tests will be done.</value>
         private readonly string URL;
 
+        ///<summary>
+        ///constructor of the instruction class that initializes and assigns the dirver and url members
+        ///</summary>
+        
         public Functionalities(ChromeDriver driver, string URL)
         {
             this.driver = driver;
             this.URL = URL;
         }
 
+
+        ///<summary>
+        ///Search for repositories with search term "Selenium" and return the description of the fourth result.
+        ///</summary>
+        ///<return>
+        ///Description of the repository.
+        ///</return>
         public string GetDescription()
         {
             driver.Navigate().GoToUrl(URL);

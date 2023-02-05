@@ -8,12 +8,23 @@ using System.Threading.Tasks;
 
 namespace BotRPA
 {
+    ///<summary>
+    ///Main class that starts the application
+    ///</summary>
+    ///<remarks>
+    ///The driver, the url to visit, the configuration of the browser window are defined and the method that searches the repository is called..
+    ///</remarks>
     class Bot
     {
+       
+
         static void Main(string[] args)
         {
+
             const string URL = "https://github.com/";
-            var driver = new ChromeDriver();
+            
+            ChromeDriver driver = new ChromeDriver();
+            
             IJavaScriptExecutor jse = (IJavaScriptExecutor)driver;
 
             driver.Manage().Window.Maximize();
